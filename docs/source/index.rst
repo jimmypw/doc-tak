@@ -22,7 +22,7 @@ meaningful documentation.
 License
 -------
 
-This project has been licensed `CC0 <https://creativecommons.org/public-domain/cc0/>`_
+This project has been licensed `CC-BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>`_
 
 Contribution
 ------------
