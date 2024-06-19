@@ -1,4 +1,4 @@
-Takserver (Unofficial) Documentation
+TAK (Unofficial) Documentation
 ====================================
 
 .. toctree::
@@ -16,7 +16,7 @@ Takserver (Unofficial) Documentation
 
    /takserver/index
 
-Takserver unofficial documentation aims to provided the much needed documentation
+TAK unofficial documentation aims to provided the much needed documentation
 that TAK products so desperately deserve. This is a commuity effort to provide
 meaningful documentation.
 

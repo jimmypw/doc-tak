@@ -1,4 +1,4 @@
-Takserver - The unofficial documentation
-========================================
+TAK - The unofficial documentation
+==================================
 
-This repository holds the source code for [https://takserver.readthedocs.io]
+This repository holds the source code for [https://tak.readthedocs.io]

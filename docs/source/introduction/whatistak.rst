@@ -40,3 +40,7 @@ Products within the official TAK suite include
 * TAKserver - Server software to connect devices together across a WAN.
 * Federation Hub - Software for connecting independant TAKserver instances.
 * TAKtracker - Minimal TAK client for sending location data to a tak server.
+
+In addition to the headline products, numerous other products are available in
+the form of plugins for ATAK/WINTAK or standalone applications that compliment
+the functionality of ATAK/WINTAK with additional data and features.

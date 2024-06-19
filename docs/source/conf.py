@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'Takserver - Unofficial Documentation'
+project = 'TAK - Unofficial Documentation'
 copyright = 'by contribution (2024)'
 author = 'James Park-Watt'
 
