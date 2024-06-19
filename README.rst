@@ -1,9 +1,3 @@
-Template for the Read the Docs tutorial
-=======================================
+# Takserver - The unofficial documentation
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
-
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+This repository holds the source code for [https://takserver.readthedocs.io]
