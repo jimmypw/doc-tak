@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'Takserver - Unofficial Documentation'
-copyright = 'None, See LICENSE'
+copyright = 'by contribution (2024)'
 author = 'James Park-Watt'
 
 release = '0.1'
