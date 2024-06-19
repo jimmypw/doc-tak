@@ -37,4 +37,4 @@ may have. Before you do many any contributions please read and understand the
 license fully. All contributions must be your own work and once contributed 
 all contributions will be provided under the same license.
 
-The source code for this repository may be found on `github <https://github.com/jimmypw/doc-takserver>`_
+The source code for this repository may be found on `github <https://github.com/jimmypw/doc-tak>`_
