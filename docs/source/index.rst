@@ -7,6 +7,7 @@ Takserver (Unofficial) Documentation
    :caption: Introduction
 
    /introduction/welcome
+   /introduction/whatistak
 
 .. toctree::
    :maxdepth: 2
