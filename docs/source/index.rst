@@ -16,6 +16,13 @@ TAK (Unofficial) Documentation
 
    /takserver/index
 
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: ATAK
+
+   /atak/index
+
 TAK unofficial documentation aims to provided the much needed documentation
 that TAK products so desperately deserve. This is a commuity effort to provide
 meaningful documentation.
