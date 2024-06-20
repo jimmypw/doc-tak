@@ -15,6 +15,7 @@ TAK (Unofficial) Documentation
    :caption: Takserver
 
    /takserver/index
+   /takserver/install
 
 .. toctree::
    :maxdepth: 2
@@ -25,7 +26,8 @@ TAK (Unofficial) Documentation
 
 TAK unofficial documentation aims to provided the much needed documentation
 that TAK products so desperately deserve. This is a commuity effort to provide
-meaningful documentation.
+meaningful documentation. This documentation tries to track the latest version
+of TAK products and historic information is likely deleted.
 
 License
 -------
