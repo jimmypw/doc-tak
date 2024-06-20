@@ -13,3 +13,6 @@ has compelled me to produce some properly written documentation.
 
 .. warning::
     Do not run random scripts without reading and understanding them first.
+
+This documentation project intends to help solve this problem by consolidating
+these learnings from using the products in the TAK stack.
