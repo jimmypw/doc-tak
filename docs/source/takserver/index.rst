@@ -1,5 +1,5 @@
-TAK Server
-==========
+Introduction
+============
 
 TAK server is a java application that acts as a central server for multiple TAK
 clients to connect to. Connected clients may then exchage data. The TAK server
