@@ -16,6 +16,9 @@ TAK (Unofficial) Documentation
 
    /takserver/index
    /takserver/install
+   /takserver/coreconfig
+   /takserver/userauthenticationfile
+   /takserver/certificates
 
 .. toctree::
    :maxdepth: 2
@@ -28,6 +31,14 @@ TAK unofficial documentation aims to provided the much needed documentation
 that TAK products so desperately deserve. This is a commuity effort to provide
 meaningful documentation. This documentation tries to track the latest version
 of TAK products and historic information is likely deleted.
+
+Disclaimer
+----------
+
+This documentation project is in no way affiliated either expressly or implied 
+with TAK, its developers or the United States Govornment.
+
+
 
 License
 -------
