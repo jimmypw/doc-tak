@@ -713,13 +713,17 @@ TODO: not sure on the functionality
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - true
    * - **Type**
-     - TODO
+     - string
    * - **Default**
-     - TODO
+     - none
 
 TODO
+
+URL of ldap server to connect to
+
+Example: ldaps://
 
 
 @userstring
@@ -730,13 +734,13 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - true
    * - **Type**
-     - TODO
+     - string
    * - **Default**
-     - TODO
+     - none
 
-TODO
+UNKNOWN/TODO
 
 
 @updateinterval
@@ -747,11 +751,11 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - integer
    * - **Default**
-     - TODO
+     - none
 
 TODO
 
@@ -764,11 +768,11 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - string
    * - **Default**
-     - TODO
+     - ""
 
 TODO
 
@@ -781,11 +785,11 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - string
    * - **Default**
-     - TODO
+     - CN=(.*?)(?:,|$)
 
 TODO
 
@@ -807,7 +811,7 @@ TODO
 Must be one of:
 
 * AD - Active Directory
-* DS - TODO
+* DS - Unknown
 
 
 
@@ -820,7 +824,7 @@ Must be one of:
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
      - string
    * - **Default**
@@ -840,13 +844,17 @@ Binding to ldap server. One of either
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - string
    * - **Default**
-     - TODO
+     - none
 
-TODO
+TODO Confirm
+
+Service account for binding to ldap server
+
+e.g. CN=servicename,OU=serviceaccounts,DC=example,DC=local
 
 
 @serviceAccountCredential
@@ -857,13 +865,15 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - string
    * - **Default**
-     - TODO
+     - none
 
-TODO
+TODO Confirm
+
+Credential (password) assocaiated with serviceAccountDN
 
 
 @groupObjectClass
@@ -874,13 +884,13 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - strings
    * - **Default**
-     - TODO
+     - group
 
-TODO
+Name of LDAP class attached to group objects
 
 
 @userObjectClass
@@ -908,13 +918,23 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - true
    * - **Type**
-     - TODO
+     - string
    * - **Default**
-     - TODO
+     - none
 
-TODO
+.. note::
+  Requires confirmation
+
+  Is this parth searchable
+
+RDN to container containing group objects.
+
+E.g. 
+
+* DC=example,DC=local
+* OU=groups,DC=example,DC=local
 
 
 @userBaseRDN
@@ -925,13 +945,23 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - string
    * - **Default**
-     - TODO
+     - none
 
-TODO
+.. note::
+  Requires confirmation
+
+  Is this parth searchable
+
+RDN to container containing user objects.
+
+E.g. 
+
+* DC=example,DC=local
+* OU=users,DC=example,DC=local
 
 
 @x509groups
@@ -942,11 +972,11 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - boolean
    * - **Default**
-     - TODO
+     - true
 
 TODO
 
@@ -959,11 +989,11 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - boolean
    * - **Default**
-     - TODO
+     - false
 
 TODO
 
@@ -976,11 +1006,11 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - boolean
    * - **Default**
-     - TODO
+     - false
 
 TODO
 
@@ -993,13 +1023,15 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - boolean
    * - **Default**
-     - TODO
+     - false
 
-TODO
+TODO  confirm
+
+Follow nested groups
 
 
 @postMissionEventsAsPublic
@@ -1010,11 +1042,11 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - boolean
    * - **Default**
-     - TODO
+     - false
 
 TODO
 
@@ -1027,11 +1059,11 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - string
    * - **Default**
-     - TODO
+     - none
 
 TODO
 
@@ -1044,13 +1076,14 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - string
    * - **Default**
-     - TODO
+     - none
 
-TODO
+Path to trust store containing certificate used to verify LDAP
+server connection certificate.
 
 
 @ldapsTruststorePass
@@ -1061,13 +1094,13 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - string
    * - **Default**
-     - TODO
+     - none
 
-TODO
+The password associcated with keystore in @ldapsTruststoreFile
 
 
 @readOnlyGroup
@@ -1078,11 +1111,11 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - string
    * - **Default**
-     - TODO
+     - none
 
 TODO
 
@@ -1095,11 +1128,11 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - string
    * - **Default**
-     - TODO
+     - _READ
 
 TODO
 
@@ -1112,11 +1145,11 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - string
    * - **Default**
-     - TODO
+     - _WRITE
 
 TODO
 
@@ -1129,11 +1162,11 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - boolean
    * - **Default**
-     - TODO
+     - false
 
 TODO
 
@@ -1146,11 +1179,11 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - string
    * - **Default**
-     - TODO
+     - none
 
 TODO
 
@@ -1163,11 +1196,11 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - string
    * - **Default**
-     - TODO
+     - none
 
 TODO
 
@@ -1180,11 +1213,11 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - string
    * - **Default**
-     - TODO
+     - none
 
 TODO
 
@@ -1197,11 +1230,11 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - boolean
    * - **Default**
-     - TODO
+     - false
 
 TODO
 
@@ -1214,11 +1247,11 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - string
    * - **Default**
-     - TODO
+     - 30000
 
 TODO
 
@@ -1231,11 +1264,11 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - string
    * - **Default**
-     - TODO
+     - distinguishedName
 
 TODO
 
@@ -1248,11 +1281,11 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
    * - **Type**
-     - TODO
+     - string
    * - **Default**
-     - TODO
+     - cn
 
 TODO
 
@@ -1457,6 +1490,65 @@ TODO
 
 <submission>
 ------------
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+
+Submission service configuration
+
+@ignoreStaleMessages
+^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - none
+
+TODO
+
+@validateXml
+^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - false
+
+TODO
+
+
+@dropMesssagesIfAnyServiceIsFull
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - false
+
+TODO
+
 
 
 <subscription>
