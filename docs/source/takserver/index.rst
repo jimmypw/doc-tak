@@ -64,3 +64,16 @@ TAKserver depends on:-
 * Openssl - Soft dependancy for certificate management.
 
 And docker if that is your chosen deployment mechanism.
+
+
+Source code
+-----------
+
+.. note::
+  The TAKserver source code lags behind the release available on tak.gov. For
+  example; the latest release on tak.gov is currently 5.1-RELEASE-40 and the
+  latest release available on github is 5.1-RELEASE-8
+
+TAKserver is open source. The available source code lags slightly behind the
+current release. The code is available from the official github repository
+at https://github.com/TAK-Product-Center/Server
