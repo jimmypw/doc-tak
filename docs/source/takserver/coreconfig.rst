@@ -10,6 +10,12 @@ XSD schema that validates the corresponding XML file. The functionality
 associated with the configuration directive is either known or is still yet to
 be deciphered from reading the code.
 
+Many of the features that TAK Server provides may be configurated from the
+Administration interface. There are still many features that are not exposed
+through the admin interface and must be configured manually. In addition having
+a complete reference for the CoreConfig.xml can greatly assist with automated
+deployment.
+
 <network>
 ---------
 
@@ -23,6 +29,499 @@ be deciphered from reading the code.
 The network element configures network input/output and configures
 security settings for those connections such as authentication,
 authorisation and encryption.
+
+@multicastTTL
+^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - int
+   * - **Default**
+     - 1
+
+TTL of multicast packets
+
+@serverId
+^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - ""
+
+A unique string representing the server ID. 
+
+TODO: How is this used exactly? I expect it is used during federation.
+
+
+@enterpriseSyncSizeLimitMB
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - int
+   * - **Default**
+     - 400
+
+Sets the size limit for file uploads in MB.
+
+@enterpriseSyncSizeUploadTimeoutMillis
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - int
+   * - **Default**
+     - 600000
+
+Set the timeout for file uploads in milliseconds (sync/upload endpoint).
+
+@enterpriseSyncSizeDownloadTimeoutMillis
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - int
+   * - **Default**
+     - 600000
+
+Set the timeout for file downloads in milliseconds (sync/upload endpoint).
+
+@missionPackageAutoExtractSizeLimitMB
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - int
+   * - **Default**
+     - 10
+
+TODO
+
+@httpSessionTimeoutMinutes
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - int
+   * - **Default**
+     - 130
+
+TODO
+
+@extWebContentDir
+^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - webcontent
+
+TODO
+
+@takServerHost
+^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - none
+
+TODO
+
+@useLinuxEpoll
+^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - true
+
+TODO
+
+@allowAllOrigins
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - false
+
+TODO
+
+@enableHSTS
+^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - true
+
+TODO
+
+@esyncEnableCache
+^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - int
+   * - **Default**
+     - 0
+
+TODO
+
+@esyncEnableCotFilter
+^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - false
+
+TODO
+
+@esyncCotFilter
+^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - none
+
+TODO
+
+@version
+^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - ""
+
+Specifies the version of software that the server is running.
+
+
+@webCiphers
+^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - ""
+
+TODO
+
+@tomcatPoolIdleToMax
+^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - true
+
+Set tomcat idle threads to configured max.
+
+@tomcatMaxPool
+^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - int
+   * - **Default**
+     - -1
+
+Explicity set the size for Tomcat service thread pool. multiplier for
+autodetected ignite thread pool size. The optimal value varies based on system
+capabilities (CPU core count).
+
+
+@tomcatPoolMultiplier
+^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - int
+   * - **Default**
+     - 32
+
+Set the multiplier for autodetected ignite thread pool size. The optimal value
+varies based on system capabilities (CPU core count).
+
+
+@cloudwatchNamespace
+^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - takserver
+
+TODO
+
+@cloudwatchMetricsBatchSize
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - int
+   * - **Default**
+     - 20
+
+TODO
+
+@cloudwatchEnable
+^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - false
+
+TODO
+
+@cloudwatchName
+^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - ""
+
+TODO
+
+@missionCopTool
+^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - vbm
+
+TODO
+
+
+@pingTimeoutSeconds
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - integer
+   * - **Default**
+     - none
+
+TODO
+
+@pingTimeoutCheckIntervalSeconds
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - integer
+   * - **Default**
+     - 60
+
+TODO
+
+@alwaysArchiveMissionCot
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - false
+
+TODO
+
+@MissionCreateGroupsRegex
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - none
+
+TODO
+
+@MissionDeleteRequiresOwner
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - false
+
+TODO
+
+
+
 
 <filter>
 ^^^^^^^^
@@ -130,6 +629,10 @@ The authentication associated with this input options are:
 * anonymous
 * file
 
+.. note::
+  Certain options require other options to be set e.g. LDAP requires an LDAP
+  server to be configured.
+
 @authrequired
 """""""""""""
 
@@ -163,9 +666,19 @@ TODO
 
 Protocol in use by input
        
-* tcp
-* udp
-* tls
+* tcp - standard tcp. 1 message per connection.
+* stcp - streaming tcp. multiple messages per connection.
+* udp - one message per packet
+* tls - secure streaming tcp (tls) CoT or Protobuf
+* grpc - secure streaming with GRPC
+* cottls - secure streaming TCP (cottls) CoT only
+
+.. note::
+  Make sure you correctly specify your protocol else the input will malfunction.
+
+  E.g. Sending a streamed tcp message in to a standard tcp port will result in
+  only the last message being propagated to clients.
+
 
 @group
 """"""
@@ -181,7 +694,7 @@ Protocol in use by input
    * - **Default**
      - none
 
-Group name associated with the input
+Group name associated with the input as if the input was in the 'in' group.
 
 
 @iface
@@ -198,7 +711,7 @@ Group name associated with the input
    * - **Default**
      - none
 
-Host insterface name to listen on
+An optional valid network interface name (e.g., en0).
 
 @archive
 """"""""
@@ -263,7 +776,10 @@ TODO
    * - **Default**
      - 2
 
-TODO
+COT message version:-
+
+* 1 - levacy
+* 2 - modern (high performance)
 
 
 @syncCacheRetentionSeconds
@@ -1554,86 +2070,290 @@ TODO
 <subscription>
 --------------
 
+Subscriptions
+
+@reloadPersistent
+^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - false
+
+TODO
+
+<static>
+^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - true
+
+Defines static subscriptions
+
+<filtergroup>
+"""""""""""""
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+
+TODO
+
+
+<filter>
+""""""""
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+
+TODO
+
+
+
 
 <repository>
 ------------
 
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - true
+
+Database configuration
 
 <repeater>
 ----------
 
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - TODO
 
 <filter>
 --------
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - TODO
 
 
 <buffer>
 --------
 
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - TODO
+
 
 <dissemination>
 ---------------
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - TODO
 
 
 <certificateSigning>
 --------------------
 
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - TODO
+
 
 <logging>
 ---------
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - TODO
 
 
 <security>
 ----------
 
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - TODO
+
 
 <ferry>
 -------
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - TODO
 
 
 <async>
 -------
 
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - TODO
+
 
 <federation>
 ------------
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - TODO
 
 
 <geocache>
 ----------
 
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - TODO
+
 
 <citrap>
 --------
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - TODO
 
 
 <xmpp>
 ------
 
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - TODO
+
 
 <plugins>
 ---------
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - TODO
 
 
 <cluster>
 ---------
 
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - TODO
+
 
 <docs>
 ------
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - TODO
 
 
 <email>
 -------
 
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - TODO
+
 
 <locate>
 --------
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - TODO
 
 
 <vbm>
 -----
 
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - TODO
+
 
 <profile>
 ---------
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - TODO
