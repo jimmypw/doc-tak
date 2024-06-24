@@ -2125,8 +2125,121 @@ TODO
 
 TODO
 
+@_name
+""""""
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - true
+   * - **Type**
+     - string
+   * - **Default**
+     - none
+
+TODO
+
+@protocol
+"""""""""
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - true
+   * - **Type**
+     - string
+   * - **Default**
+     - none
+
+TODO
 
 
+@address
+""""""""
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - true
+   * - **Type**
+     - string
+   * - **Default**
+     - none
+
+TODO
+
+
+@port
+"""""
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - true
+   * - **Type**
+     - int
+   * - **Default**
+     - none
+
+TODO
+
+
+@xpath
+""""""
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - *
+
+TODO
+
+
+@xpfederatedath
+"""""""""""""""
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - false
+
+TODO
+
+@iface
+""""""
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - none
+
+TODO
 
 <repository>
 ------------
@@ -2138,7 +2251,226 @@ TODO
    * - **Required**
      - true
 
-Database configuration
+Database configuration and repository service
+
+<connection>
+^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - true
+
+@enable
+^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - true
+
+TODO
+
+@numDbConnections
+^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - integer
+   * - **Default**
+     - 200
+
+TODO
+
+@connectionPoolAutoSize
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - true
+
+TODO
+
+@primaryKeyBatchSize
+^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - integer
+   * - **Default**
+     - 500
+
+TODO
+
+@insertionBatchSize
+^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - integer
+   * - **Default**
+     - 500
+
+TODO
+
+@archive
+^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - false
+
+TODO
+
+@iconsetDir
+^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - iconsets
+
+TODO
+
+@enableCallsignAudit
+^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - true
+
+TODO
+
+@contactCacheMaxClearRateSeconds
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - integer
+   * - **Default**
+     - 1
+
+TODO
+
+@dbTimeoutMs
+^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - long
+   * - **Default**
+     - 60000
+
+TODO
+
+@dbConnectionMaxLifetimeMs
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - integer
+   * - **Default**
+     - 600000
+
+TODO
+
+@dbConnectionMaxIdleMs
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - integer
+   * - **Default**
+     - 10000
+
+TODO
+
+@poolScaleFactor
+^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - integer
+   * - **Default**
+     - 200
+
+TODO
+
 
 <repeater>
 ----------
