@@ -2263,6 +2263,160 @@ Database configuration and repository service
    * - **Required**
      - true
 
+Defines connection to postgresql database
+
+@url
+""""
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - jdbc:postgresql://127.0.0.1:5432/cot
+
+JDBC url to database
+
+@username
+"""""""""
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - martiuser
+
+Username to connect to the database server as
+
+@password
+"""""""""
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - ""
+
+Password corresponding to @username
+
+@sslEnabled
+"""""""""""
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - false
+
+Is SSL enabled on the database server connection
+
+@sslMode
+""""""""
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - verify-ca
+
+pgJDBC setting for handling remote certificates. Possible values include:-
+
+* disable
+* allow
+* prefer
+* require
+* verify-ca
+* verify-full
+
+@sslCert
+""""""""
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - ""
+
+Configure a certificate to present to the postgresql server for mTLS auth.
+
+@sslKey
+""""""""
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - ""
+
+Key file assicuated with @sslCert
+
+@sslRootCert
+""""""""""""
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - ""
+
+TODO
+
+@queryBufferMaxMemoryPercentage
+"""""""""""""""""""""""""""""""
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - integer
+   * - **Default**
+     - 40
+
+TODO
+
+
 @enable
 ^^^^^^^
 
@@ -2622,7 +2776,23 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
+
+@usePluginMessageQueue
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - true
+
+TODO
 
 
 <cluster>
@@ -2644,7 +2814,23 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
+
+@adminOnly
+^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - true
+
+Is API documentation accessable by admin users only.
 
 
 <email>
@@ -2677,7 +2863,153 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
+
+TODO
+
+@enabled
+^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - false
+
+TODO
+
+@disableSASharing
+^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - true
+
+TODO
+
+@disableChatSharing
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - false
+
+TODO
+
+@returnCopsWithPublicMissions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - true
+
+TODO
+
+@ismUrl
+^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - none
+
+TODO
+
+@ismConnectTimeoutSeconds
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - long
+   * - **Default**
+     - -1
+
+TODO
+
+@ismReadTimeoutSeconds
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - long
+   * - **Default**
+     - -1
+
+TODO
+
+@ismStrictEnforcing
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - false
+
+TODO
+
+@networkClassification
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - string
+   * - **Default**
+     - none
+
+TODO
 
 
 <profile>
@@ -2688,4 +3020,20 @@ TODO
    :header-rows: 0
 
    * - **Required**
-     - TODO
+     - false
+
+@useStreamingGroup
+^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 25 75
+   :header-rows: 0
+
+   * - **Required**
+     - false
+   * - **Type**
+     - boolean
+   * - **Default**
+     - false
+
+TODO
