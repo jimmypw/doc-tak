@@ -16,9 +16,11 @@ TAK (Unofficial) Documentation
 
    /takserver/index
    /takserver/install
+   /takserver/architecture
    /takserver/coreconfig
    /takserver/userauthenticationfile
    /takserver/certificates
+   /takserver/api
 
 .. toctree::
    :maxdepth: 2

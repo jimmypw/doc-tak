@@ -35,8 +35,9 @@ Raspberry PI 4 (8GB). The amount of reources required will depend heavily on:-
 * Number of Users
 * Chosen deployment architecture
 
-For a ball park figure. A small deployment supporting up to 50 users on a single
-server setup and no data feeds would require around the following specification.
+For a ball park figure. A small deployment supporting up to 500 users on a
+single server setup and no data feeds would require around the following
+specification.
 
 * 64 bit OS: Debian 12, Ubuntu 22.04, Raspberry PI OS (Based on debian 12), Rocky 8, Redhat 8 OR Docker
 * 4 Core CPU
@@ -45,7 +46,7 @@ server setup and no data feeds would require around the following specification.
 * 100mbps Connection
 
 Although a raspberry pi may be able to meet these specifications and will run 
-just fine for very small deployments. The platform is very under powered and 50
+just fine for very small deployments. The platform is very under powered and 500
 concurrent users may be stretching the platforms limited power too far.
 
 .. note::

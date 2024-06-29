@@ -69,6 +69,36 @@ overview of these files and their intended uses.
    * - DEB_POLICY.POL
      - Debian policy file
 
+
+Verification
+^^^^^^^^^^^^
+
+Verification of the packages is important to ensure authenticity of the file and
+that the file was not corrupted during the transfer.
+
+Along with each of the files available on tak.gov there is an MD5 checksum of
+the file. While the md5 is sufficient as a basic test to ensure data was not
+corrupted in transit; it is inadequate to determine if the file was modified in
+transit intentionally.
+
+To test the md5 sum
+
+.. code-block:: shell
+
+  md5sum download.zip
+  9e4ab05886b3140f97632936c24383fc  download.zip
+
+Simply ensure the output of md5sum matches the one provided from tak.gov.
+
+Verification of signature
+"""""""""""""""""""""""""
+
+Cryptographic verification of the package is substantially more robust than a
+a simple checksum.
+
+TODO
+
+
 Server Deployment
 -----------------
 
