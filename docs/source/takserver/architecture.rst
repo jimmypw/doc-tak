@@ -65,3 +65,24 @@ Messaging
 
 The primary endpoint for all data clients weather atak users, data streams etc..
 
+Retention
+---------
+
+.. note::
+  Although the retention process is running, the maintenance jobs it performs
+  are disabled by default.
+
+The retention service is a background process that monitors and prunes old data
+held by the tak server. This may be configured by the user interface under 
+Administrative -> Data Retention. The configuration is stored on disk under:
+`conf/retention`
+
+Plugins
+-------
+
+The takserver plugin manager service. For thoe most part this service is
+redundant since there aren't many if any takserver plugins available publicly.
+
+.. note::
+  Did you know you can disable the takserver plugin manager by using the 
+  `takserver-noplugins` systemd unit.
