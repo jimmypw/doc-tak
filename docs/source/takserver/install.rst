@@ -291,9 +291,9 @@ the root certificate authority. This certificate will be used to establish trust
 between servers and clients through signing every other certificate. takserver
 contains a dedicated script to creating this certificate authority.
 
-.. code-block:: shell
+.. code-block::
   
-  ./makeRootCa.sh
+  $ ./makeRootCa.sh
   Please give a name for your CA (no spaces).  It should be unique.  If you
   don't enter anything, or try something under 5 characters, I will make one for
   you.
