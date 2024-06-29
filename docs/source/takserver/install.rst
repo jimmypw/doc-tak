@@ -69,8 +69,11 @@ overview of these files and their intended uses.
    * - DEB_POLICY.POL
      - Debian policy file
 
+Server Deployment
+-----------------
+
 All-in-one Single Server Deployment (Quickstart)
-------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This guide will deploy an all in one deployment on debian 12. 
 
@@ -78,7 +81,7 @@ Download the correct package. For me it is `takserver_5.1-RELEASE40_all.deb`
 
 
 Creation of host and configure networking
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""""""""""""""""
 
 After you have created your host you'll be running tak server on we will need to
 make some changes before we can start using takserver. 
@@ -104,7 +107,7 @@ certificate the TLS will fail and the connction will fail in turn.
 
 
 Upload and install of takserver
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""""""
 
 
 Upload takserver_5.1-RELEASE40_all.deb to virtual machine
@@ -151,8 +154,26 @@ After the installer has completed you will be in the following situation:-
 * takserver is stopped
 * taksercer is unconfigured
 
-Configuration of takserver
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. warning::
+  Don't try to start takserver yet - it will fail.
+
+.. note::
+  The software is now installed and is ready for configuration of TLS and users
+  See the "Certificate Management" section of this document.
+
+Multi Server Deployment
+^^^^^^^^^^^^^^^^^^^^^^^
+
+TODO
+
+Multi Server Deployment (External Database)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Certificate management
+----------------------
+
+Configuration of certificate Metadata
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To get takserver running you need to complete the generation of the TLS
 certificates. This remainder of this guide will complete the generation of
@@ -242,8 +263,10 @@ contains a dedicated script to creating this certificate authority.
 
 .. code-block:: shell
   
-  $ ./makeRootCa.sh
-  Please give a name for your CA (no spaces).  It should be unique.  If you don't enter anything, or try something under 5 characters, I will make one for you
+  ./makeRootCa.sh
+  Please give a name for your CA (no spaces).  It should be unique.  If you
+  don't enter anything, or try something under 5 characters, I will make one for
+  you.
 
 You will be prompted to enter a name for the CA. This should be unique but and
 easily identifyable.
@@ -252,6 +275,8 @@ The certificate authority is now bootstrapped. At this point you may choose to
 create a multi tiered authority throug the creation of an intermediate
 certificate. I won't be documenting this technique here due because I want to
 write an entire section on it.
+
+
 
 Generating the Server Certificate
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -320,6 +345,16 @@ Now we have enough configuration to start the server. Go ahead and run.
   # systemctl enable takserver 
   # systemctl start takserver
 
+If you are running takserver on a device with limited resources such as a
+raspberry pi it is possible to run the server with reduced functionality.
+
+.. code-block:: shell
+  
+  systemctl enable --now takserver-noplugins
+
+  # this is the equivilent of:
+  # systemctl enable takserver-noplugins 
+  # systemctl start takserver-noplugins
 
 .. note::
     takserver takes a bit of time to start. try not to be impatient.
@@ -401,11 +436,3 @@ command is not run.
 When distributing the certificates to users for importing in to ATAK/WINTAK etc
 you will also need to provde `truststore-root.p12`
 
-
-Multi Server Deployment
------------------------
-
-TODO
-
-Multi Server Deployment (External Database)
--------------------------------------------
