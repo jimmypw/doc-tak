@@ -314,13 +314,16 @@ Generating the Server Certificate
 Now generate the server certificate signed by the CA. Remember the hostname we
 provided the server earlier. Use that Hostname HERE.
 
+.. warning::
+  The hostname used in the command MUST mach the DNS hostname that you use to
+  access the server.
+
 .. code-block:: shell
-  
+
   ./makeCert.sh server host.example.com
 
-.. note::
-  THe hostname used in the command MUST mach the DNS hostname that you use to
-  access the server.
+This command will create certs/files/host.example.com.jks that contains a
+certificate signed by our CA.
 
 Certain features of the user interface, especially when opening ports require
 takserver.jks to exist. Therefore we have to make the file that we just created
