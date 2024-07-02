@@ -20,6 +20,7 @@ TAK (Unofficial) Documentation
    /takserver/coreconfig
    /takserver/userauthenticationfile
    /takserver/certificates
+   /takserver/troubleshooting
    /takserver/api
 
 .. toctree::
