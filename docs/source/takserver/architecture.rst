@@ -10,11 +10,17 @@ of these microservices have a specific purpose.
 * Retention
 * Plugins
 
+And ofcourse the postgres database.
+
 .. note::
     The ports provided below are in reference to the default ports that are 
     opened by the microservice in use as per the default configuration. These
     ports and purposes may change after configuration. I have not documented 
     outgoing connections.
+
+All of the server components are expected to run on on the same server with the
+exception of the database server that may run seperately. As a result the
+takserver may only scale vertically.
 
 Config
 ------
