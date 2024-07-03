@@ -22,6 +22,8 @@ All of the server components are expected to run on on the same server with the
 exception of the database server that may run seperately. As a result the
 takserver may only scale vertically.
 
+.. image:: images/application_architecture.png
+
 Config
 ------
 
