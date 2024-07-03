@@ -32,8 +32,32 @@ Tak ships with two unit files
 * takserver-noplugins
 
 These two units are essentially the same. The difference is that the
-`-noplugins` variant does not start the plugin manager service. Most users can
-get by using the `noplugins` unit.
+`-noplugins` variant does not start the plugin manager service, nor the
+retention service. Most users can get by using the `noplugins` unit.
+
+These units in turn call init scripts in `/etc/init.d`
+
+takserver.unit calls:
+
+* /etc/init.d/takserver-config (start|stop)
+* /etc/init.d/takserver-messaging (start|stop)
+* /etc/init.d/takserver-api (start|stop)
+* /etc/init.d/takserver-plugins (start|stop)
+* /etc/init.d/takserver-retention (start|stop)
+
+takserver-noplugins calls:
+
+* /etc/init.d/takserver-config (start|stop)
+* /etc/init.d/takserver-messaging (start|stop)
+* /etc/init.d/takserver-api (start|stop)
+
+These secondary init scripts when starting call scripts within /opt/tak:
+
+* /etc/init.d/takserver-config -> /opt/tak/takserver-config.sh
+* /etc/init.d/takserver-messaging -> /opt/tak/takserver-messaging.sh
+* /etc/init.d/takserver-api -> /opt/tak/takserver-api.sh
+* /etc/init.d/takserver-plugins -> /opt/tak/takserver-plugins.sh
+* /etc/init.d/takserver-retention -> /opt/tak/takserver-retention.sh
 
 Status
 ^^^^^^
@@ -59,6 +83,16 @@ To start takserver (if stopped)
     # or
     systemctl start takserver-noplugins
 
+It is also possible to start individual microservices
+
+.. code-block:: shell
+
+    /etc/init.d/takserver-config start
+    /etc/init.d/takserver-messaging start
+    /etc/init.d/takserver-api start
+    /etc/init.d/takserver-plugins start
+    /etc/init.d/takserver-retention start
+
 Stopping
 ^^^^^^^^
 
@@ -71,6 +105,15 @@ To stop takserver (if started)
     # or
     systemctl stop takserver-noplugins
 
+It is also possible to stop individual microservices
+
+.. code-block:: shell
+
+    /etc/init.d/takserver-config stop
+    /etc/init.d/takserver-messaging stop
+    /etc/init.d/takserver-api stop
+    /etc/init.d/takserver-plugins stop
+    /etc/init.d/takserver-retention stop
 
 Enabling at boot
 ^^^^^^^^^^^^^^^^
@@ -95,3 +138,7 @@ If you do not want takserver to come online when the server is started
     systemctl enable takserver
     # or
     systemctl enable takserver-noplugins
+
+Logging
+-------
+
